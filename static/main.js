@@ -6,8 +6,13 @@ const typeHandler = function(e) {
   xhr.open("POST", "/");
   xhr.send(e.target.value);
   xhr.onreadystatechange = (e) => {
-    res = xhr.responseText;
-    res = res.replace(/(?:\r\n|\r|\n)/g, '<br>');
+    data = xhr.responseText.split('\n');
+    res = ""
+    for (let d of data) {
+      res += "<p class='text-grey-darker text-base mb-3'>\n"
+      res += d
+      res += "</p>\n"
+    }
     $result.innerHTML = res;
   }
 }
