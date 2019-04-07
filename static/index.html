@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Recipe Translator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mx-auto max-w-lg px-4 my-16">
+        <h1 class="mb-10">Traducteur de recettes</h1>
+
+        <form class="w-full max-w-md">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                        for="grid-password">Recette US</label>
+
+                    <textarea
+                        class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+                        id="recipe" rows="8" placeholder="1/2 cup olive oil..."></textarea>
+                </div>
+            </div>
+        </form>
+
+        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">Recette
+            FR</label>
+        <div class="max-w-md w-full lg:flex">
+
+            <div class="border border-grey-light bg-white rounded p-4 flex flex-col justify-between leading-normal">
+                <div>
+                    <p class="text-grey-darker text-base leading-loose" id="result">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+
+</html>
